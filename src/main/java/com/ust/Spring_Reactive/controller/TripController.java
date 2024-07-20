@@ -38,6 +38,7 @@ public class TripController {
             return tripService.deleteTrip(id);
         }
 
+
         @GetMapping("/getByPriceRange/{minPrice}/{maxPrice}")
         public Flux<Tripdto> getTripsByPriceRange(@PathVariable int minPrice, @PathVariable int maxPrice){
             return tripService.getTripsByPriceRange(minPrice, maxPrice);
